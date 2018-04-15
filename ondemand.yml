@@ -1,0 +1,13 @@
+---
+# This playbook handles setting up ondemand servers
+
+- name: install ondemand
+  hosts: ondemand
+  remote_user: root
+  become: yes
+  become_method: sudo
+
+  roles:
+    - role: common
+    - role: geerlingguy.nodejs
+    - role: swordsreversed.ffmpeg

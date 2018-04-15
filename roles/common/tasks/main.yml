@@ -1,0 +1,11 @@
+---
+  - name: Install gcc
+    apt:
+      name: gcc
+      state: present
+
+  - name: Install Liquidsoap
+    apt:
+      name: liquidsoap
+      state: present
+      update_cache: true
